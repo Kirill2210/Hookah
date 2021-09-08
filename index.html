@@ -7,6 +7,7 @@
 	<title>Hookah</title>
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -94,7 +95,7 @@
 	<section class="tradition">
 		<div class="container">
 			<div class="tradition__inner">
-				<div class="tradition__item tradition__top">
+				<div class="tradition__top">
 					<div class="title">
 						Возраждаем традицию
 					</div>
@@ -110,7 +111,7 @@
 						Серьезная сигарная карта и достойный выбор кальянов – standart, premium или de luxe. Всегда в наличии элитный алкоголь, который составляет отличную партию сигарам. Всем, кто за рулем бармен предложит авторский чай.
 					</div>
 				</div>
-				<div class="tradition__item tradition-img">
+				<div class="tradition-img">
 					<img src="images/tradition.svg" alt="images">
 				</div>
 				<div class="tradition__item">
@@ -132,8 +133,31 @@
 			</div>
 		</div>
 	</section>
+	<section class="interior" style="background-image: url(images/interior-bg.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="interior__title title">
+				Интерьер
+			</div>
+			<div class="interior__swiper">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide"><img src="images/interior-swipe1.jpg" alt="images"></div>
+			    <div class="swiper-slide"><img src="images/interior-swipe2.jpg" alt="images"></div>
+			    <div class="swiper-slide"><img src="images/interior-swipe3.jpg" alt="images"></div>
+			    <div class="swiper-slide"><img src="images/interior-swipe4.jpg" alt="images"></div>
+			    <div class="swiper-slide"><img src="images/interior-swipe4.jpg" alt="images"></div>
+			  </div>
+			</div>
+			<div class="interior__swiper-btn swiper-button-prev">
+				<i class="las la-angle-left"></i>
+			</div>
+			<div class="interior__swiper-btn swiper-button-next">
+				<i class="las la-angle-right"></i>
+			</div>
+		</div>
+	</section>
 	
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
