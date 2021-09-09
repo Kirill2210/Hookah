@@ -354,3 +354,158 @@ ul, li {
 	color: #6E7483;
 	opacity: 1;
 }
+
+/* end interior */
+
+/* start menu */
+
+.menu {
+	padding-top: 110px;
+	padding-bottom: 100px;
+	background-color: #E3E5EA;
+}
+.menu .title {
+	font-size: 36px;
+	line-height: 53px;
+}
+.menu__tabs {
+	position: relative;
+	margin-top: 43px;
+	font-size: 0;
+}
+.menu__tabs .tabs__img {
+	width: 188px;
+	height: 166px;
+	position: absolute;
+	top: -130px;
+	right: 0;
+}
+.menu__tabs input[type="radio"] {
+	display: none;
+}
+.menu__tabs label {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 25px;
+	padding: 13px 20px 13px 20px;
+	background-color: transparent;
+	transition: all .5s;
+	cursor: pointer;
+	position: relative;
+	transition: all .5s;
+	overflow: hidden;
+}
+.menu__tabs label span {
+	color: #2B2D33;
+	position: relative;
+	z-index: 2;
+	transition: all .5s;
+}
+.menu__tabs label::after {
+	content: '';
+	width: 150%;
+	height: 150%;
+	background-color: #6C525B;
+	border-radius: 50%;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	transition: all .5s;
+}
+.menu__tabs label:hover::after {
+	transform: translate(-50%, -20%);
+}
+.menu__tabs label:hover span {
+	color: #E3E5EA;
+}
+.menu__tabs input:checked + label::after {
+	transform: translate(-50%, -20%);
+}
+.menu__tabs input:checked + label span {
+	color: #E3E5EA;
+}
+.menu__tabs hr {
+	height: 1px;
+	width: 100%;
+	background-color: #BDC4CF;
+}
+.menu__tabs .tabs__content {
+	display: none;
+	margin-top: 50px;
+}
+.menu__tabs #tab-btn-1:checked~.tabs__content-1,
+.menu__tabs #tab-btn-2:checked~.tabs__content-2,
+.menu__tabs #tab-btn-3:checked~.tabs__content-3 {
+	display: block;
+	animation-name: tabs;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+@keyframes tabs {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.menu__swiper {
+	width: 100%;
+}
+.menu__swiper-btn {
+	display: none;
+}
+.menu__swiper .swiper-slide {
+	padding: 45px 15px;
+	border: 4px solid #CFD2D9;
+}
+.menu__cap {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+.menu__cap-name {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	color: #2B2D33;
+}
+.menu__price {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	color: #6C525B;
+}
+.menu__assortment-item {
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 10px;
+}
+.menu__assortment-name {
+	font-weight: 500;
+}
+.menu__assortment li {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 25px;
+	color: #2B2D33;
+}
+.menu__assortment-box {
+	margin-top: 21px;
+}
+.menu__assortment-subtitle {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	color: #2B2D33;
+}
+.menu__assortment-box-text {
+	margin-top: 22px;
+	font-size: 15px;
+	line-height: 21px;
+	color: #2B2D33;
+}
