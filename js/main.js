@@ -52,14 +52,27 @@ const swiper2 = new Swiper('.menu__swiper', {
   direction: 'horizontal',
   loop: false,
   slidesPerGroup: 1,
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
 
   // Navigation arrows
   navigation: {
     nextEl: '.menu__swiper .swiper-button-next',
     prevEl: '.menu__swiper .swiper-button-prev',
   },
+
+  breakpoints: {
+    950: {
+      slidesPerGroup: 1,
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    720: {
+      slidesPerGroup: 1,
+      slidesPerView: 3,
+      spaceBetween: 10
+    }
+  }
 
 });
 
@@ -68,8 +81,8 @@ const swiper3 = new Swiper('.news__swiper', {
   direction: 'horizontal',
   loop: false,
   slidesPerGroup: 1,
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
 
   // Navigation arrows
   navigation: {
@@ -77,7 +90,29 @@ const swiper3 = new Swiper('.news__swiper', {
     prevEl: '.news__swiper .swiper-button-prev',
   },
 
+  breakpoints: {
+    950: {
+      slidesPerGroup: 1,
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    580: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+  }
+
 });
+
+/* burger menu */
+
+const list = document.querySelector('.header__list')
+const burgerMenu = document.querySelector('.header__menu')
+
+list.addEventListener('click', function(){
+  burgerMenu.classList.toggle('active')
+})
 
 /* navigation */
 const linkNav = document.querySelectorAll('.header__link')
@@ -88,5 +123,6 @@ linkNav.forEach(function(ev) {
     const linkAtr = this.dataset.nav
     const navBlock = document.querySelector('.nav-block[data-nav ="'+linkAtr+'"]')
     navBlock.scrollIntoView({block:'start', behavior:'smooth'});
+    burgerMenu.classList.remove('active')
   })
 })

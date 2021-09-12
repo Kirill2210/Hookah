@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 	<header class="header">
@@ -28,7 +29,27 @@
 				<a href="#" class="logo" style="background-image: url(images/logo.png);">
 					<span>Дым Кудрявый</span>
 				</a>
-				<div class="header__top-item">
+				<nav class="header__menu">
+					<ul>
+						<li>
+							<a class="header__link" href="#" data-nav="tradition">О клубе</a>
+						</li>
+						<li>
+							<a class="header__link" href="#" data-nav="interior">Интерьер</a>
+						</li>
+						<li>
+							<a class="header__link" href="#" data-nav="menu">Меню</a>
+						</li>
+						<li>
+							<a class="header__link" href="#" data-nav="cosiness">Преимущества</a>
+						</li>
+						<li>
+							<a class="header__link" href="#" data-nav="news">Новости</a>
+						</li>
+						<li>
+							<a class="header__link" href="#" data-nav="contact">Контакты</a>
+						</li>
+					</ul>
 					<div class="header__top-social">
 						<a href="#">
 							<i class="lab la-vk"></i>
@@ -40,39 +61,19 @@
 							<i class="lab la-facebook-f"></i>
 						</a>
 					</div>
-					<nav>
-						<ul class="header__menu">
-							<li>
-								<a class="header__link" href="#" data-nav="tradition">О клубе</a>
-							</li>
-							<li>
-								<a class="header__link" href="#" data-nav="interior">Интерьер</a>
-							</li>
-							<li>
-								<a class="header__link" href="#" data-nav="menu">Меню</a>
-							</li>
-							<li>
-								<a class="header__link" href="#" data-nav="cosiness">Преимущества</a>
-							</li>
-							<li>
-								<a class="header__link" href="#" data-nav="news">Новости</a>
-							</li>
-							<li>
-								<a class="header__link" href="#" data-nav="contact">Контакты</a>
-							</li>
-						</ul>
-					</nav>
 					<div class="header__list">
-						<span></span>
-						<span></span>
-						<span></span>
+						<span class="header__list-01"></span>
+						<span class="header__list-02"></span>
+						<span class="header__list-03"></span>
 					</div>
-				</div>
+					<div class="overlay"></div>
+				</nav>
 			</div>
-			<div class="header__box">
-				<div class="header__title title">
+			<div class="header__title">
+				<div class="title">
 					Самый шикарный курительный клуб Урала
 				</div>
+				<div class="header__title-box"></div>
 			</div>
 			<div class="header__contact">
 				<a href="tel:+73432989888" class="phone contact">
@@ -492,10 +493,6 @@
 	  </section>
 	<section class="cosiness nav-block" data-nav="cosiness">
 		<div class="cosiness__wrapper">
-			<div class="cosiness__img">
-				<img src="images/cosiness-bg.jpg" alt="images">
-				<div class="overlay"></div>	
-			</div>
 			<div class="cosiness__box">
 				<div class="cosiness__body">
 					<img class="cosiness__box-leaflet" src="images/cosiness-leaflet.svg" alt="images">
@@ -509,6 +506,10 @@
 						<li>Персонал — подготовленные мастера своего дела</li>
 					</ul>
 				</div>	
+			</div>
+			<div class="cosiness__img">
+				<img src="images/cosiness-bg.jpg" alt="images">
+				<div class="overlay"></div>	
 			</div>
 		</div>
 	</section>
@@ -645,7 +646,7 @@
 						</a>
 						<div class="address contact">
 							<i class="las la-map-marker"></i>
-							<span>Екатеринбург, БЦ Высоцкий, 50 этаж</span>
+							<span>Екатеринбург, ул. Малышева 51, БЦ Высоцкий, 50 этаж</span>
 						</div>
 						<div class="time contact">
 							<i class="las la-clock"></i>
@@ -686,7 +687,6 @@
 	</svg>
 	<!-- filter map -->
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=17da134e-0ff0-492c-8b58-71c9c715e2d8&lang=ru_RU" type="text/javascript">
     </script>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
