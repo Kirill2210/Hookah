@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 	<header class="header">
 		<div class="header__bg">
 			<div class="header__bg-left">
@@ -44,22 +43,22 @@
 					<nav>
 						<ul class="header__menu">
 							<li>
-								<a href="#">О клубе</a>
+								<a class="header__link" href="#" data-nav="tradition">О клубе</a>
 							</li>
 							<li>
-								<a href="#">Интерьер</a>
+								<a class="header__link" href="#" data-nav="interior">Интерьер</a>
 							</li>
 							<li>
-								<a href="#">Меню</a>
+								<a class="header__link" href="#" data-nav="menu">Меню</a>
 							</li>
 							<li>
-								<a href="#">Преимущества</a>
+								<a class="header__link" href="#" data-nav="cosiness">Преимущества</a>
 							</li>
 							<li>
-								<a href="#">Новости</a>
+								<a class="header__link" href="#" data-nav="news">Новости</a>
 							</li>
 							<li>
-								<a href="#">Контакты</a>
+								<a class="header__link" href="#" data-nav="contact">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -92,7 +91,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="tradition">
+	<section class="tradition nav-block" data-nav="tradition">
 		<div class="container">
 			<div class="tradition__inner">
 				<div class="tradition__top">
@@ -133,7 +132,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="interior" style="background-image: url(images/interior-bg.jpg);">
+	<section class="interior nav-block" style="background-image: url(images/interior-bg.jpg);" data-nav="interior">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="interior__title title">
@@ -157,7 +156,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="menu">
+	<section class="menu nav-block" data-nav="menu">
 	    <div class="container">
 	      <div class="title">
 	        Меню
@@ -491,7 +490,7 @@
 	      </div>
 	    </div>
 	  </section>
-	<section class="cosiness">
+	<section class="cosiness nav-block" data-nav="cosiness">
 		<div class="cosiness__wrapper">
 			<div class="cosiness__img">
 				<img src="images/cosiness-bg.jpg" alt="images">
@@ -513,7 +512,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="news">
+	<section class="news nav-block" data-nav="news">
 		<div class="container">
 			<div class="title">
 				Новости
@@ -626,8 +625,72 @@
 			</div>
 		</div>
 	</section>
+	<footer class="footer nav-block" data-nav="contact">
+		<div class="footer__box">
+			<div class="footer__map">
+				<div id="map"></div>
+			</div>
+			<div class="footer__box-right">
+				<div class="footer__content">
+					<div class="title">
+						Контакты
+					</div>
+					<div class="footer__content-img">
+						<img src="images/lighter.svg" alt="images">
+					</div>
+					<div class="footer__contact">
+						<a href="tel:+73432989888" class="phone contact">
+							<i class="las la-phone"></i>
+							+7 (343) 298-98-88
+						</a>
+						<div class="address contact">
+							<i class="las la-map-marker"></i>
+							<span>Екатеринбург, БЦ Высоцкий, 50 этаж</span>
+						</div>
+						<div class="time contact">
+							<i class="las la-clock"></i>
+							<span>вс-чт с 16:00 до 00:00</span>
+							<span>пт-сб с 16:00 до 04:00</span>
+						</div>
+					</div>
+					<div class="footer__social">
+						<button>
+							<i class="lab la-facebook-f"></i>
+							Facebook
+						</button>
+						<button>
+							<i class="lab la-instagram"></i>
+							Instagram
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- filter map -->
+	<svg viewBox="0 0 266 400" style="display: none;">
+	    <filter id="filter-map" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+		<feColorMatrix type="matrix" values=".33 .33 .33 0 0
+	            .33 .33 .33 0 0
+	            .33 .33 .33 0 0
+	            0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+		<feComponentTransfer in="colormatrix" result="componentTransfer">
+	    		<feFuncR type="table" tableValues="1 1 0.27 0.18"/>
+			<feFuncG type="table" tableValues="1 1 0.29 0.2"/>
+			<feFuncB type="table" tableValues="1 1 0.33 0.23"/>
+			<feFuncA type="table" tableValues="0 1"/>
+	  	</feComponentTransfer>
+		<feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+		</filter>
+	</svg>
+	<!-- filter map -->
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=17da134e-0ff0-492c-8b58-71c9c715e2d8&lang=ru_RU" type="text/javascript">
+    </script>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl3HW7sBOTCBQKnU7H_U_EpLb72Mbrvmc"></script> -->
 	<script src="js/main.js"></script>
 </body>
 </html>

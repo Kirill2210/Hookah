@@ -1,3 +1,36 @@
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [56.836099, 60.614470],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark([56.836210, 60.614412], {
+            hintContent: '',
+            balloonContent: ''
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './images/map.svg',
+            // Размеры метки.
+            iconImageSize: [44, 63],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+});
+
 const swiper = new Swiper('.interior__swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -45,3 +78,15 @@ const swiper3 = new Swiper('.news__swiper', {
   },
 
 });
+
+/* navigation */
+const linkNav = document.querySelectorAll('.header__link')
+
+linkNav.forEach(function(ev) {
+  ev.addEventListener('click', function(a) {
+    a.preventDefault();
+    const linkAtr = this.dataset.nav
+    const navBlock = document.querySelector('.nav-block[data-nav ="'+linkAtr+'"]')
+    navBlock.scrollIntoView({block:'start', behavior:'smooth'});
+  })
+})
